@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  min-height: 100vh;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: rgba(30, 60, 114, 0.7);
+  border-radius: 2rem;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  max-width: 500px;
+}
+
+.wavy-headline {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #ffecd2 0%, #fcb69f 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  letter-spacing: 2px;
+  animation: wavy 2.5s infinite linear alternate;
+  display: inline-block;
+}
+
+@keyframes wavy {
+  0% { transform: translateY(0); }
+  10% { transform: translateY(-8px); }
+  20% { transform: translateY(8px); }
+  30% { transform: translateY(-8px); }
+  40% { transform: translateY(8px); }
+  50% { transform: translateY(-8px); }
+  60% { transform: translateY(8px); }
+  70% { transform: translateY(-8px); }
+  80% { transform: translateY(8px); }
+  90% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  margin: 1.5rem 0 2rem 0;
+  color: #e0e7ef;
+  line-height: 1.6;
+}
+
+.cta-btn {
+  background: linear-gradient(90deg, #fcb69f 0%, #ffecd2 100%);
+  color: #1e3c72;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.9rem 2.2rem;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(252, 182, 159, 0.2);
+  transition: background 0.3s, color 0.3s;
+}
+
+.cta-btn:hover {
+  background: linear-gradient(90deg, #ffecd2 0%, #fcb69f 100%);
+  color: #2a5298;
+} 
