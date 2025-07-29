@@ -1,20 +1,16 @@
-// Register GSAP's ScrollTrigger plugin
 if (gsap && ScrollTrigger) {
   gsap.registerPlugin(ScrollTrigger);
 }
 
-// Run animations after the page loads
 window.addEventListener('DOMContentLoaded', function() {
-  // 1. Navbar Slide-In Animation (smoother)
   var navbar = document.getElementById('navbar');
   gsap.from(navbar, {
     y: -100,
-    duration: 1.3, // longer duration
-    ease: 'expo.out', // gentler easing
+    duration: 1.3, 
+    ease: 'expo.out', 
     delay: 0.5
   });
-
-  // 2. Button Hover Pulse Animation (smoother)
+  
   var buttons = document.querySelectorAll('.cta-btn');
   buttons.forEach(function(button) {
     button.addEventListener('mouseenter', function() {
@@ -33,7 +29,6 @@ window.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // 3. Scroll-Triggered Fade-Ins for Three Sections (smoother, with delay)
   gsap.from('.features-section', {
     scrollTrigger: '.features-section',
     opacity: 0,
