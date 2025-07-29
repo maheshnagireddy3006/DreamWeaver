@@ -5,12 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DreamWeaver — AI-Powered Lucid Dream Coach</title>
   <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 </head>
 <body>
-  <main class="hero-section">
-    <header>
+  <!-- Navbar -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <svg width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="24" cy="32" rx="16" ry="10" fill="#fff8e1" opacity="0.7"/>
+          <circle cx="32" cy="18" r="10" fill="#ffe0b2"/>
+          <ellipse cx="18" cy="22" rx="8" ry="5" fill="#fffde7"/>
+        </svg>
+        <span>DreamWeaver</span>
+      </div>
+      <ul class="nav-menu">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-content">
       <span class="logo" aria-label="DreamWeaver logo">
-        <!-- Dreamy cloud + moon SVG icon -->
         <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <ellipse cx="24" cy="32" rx="16" ry="10" fill="#fff8e1" opacity="0.7"/>
           <circle cx="32" cy="18" r="10" fill="#ffe0b2"/>
@@ -20,23 +42,72 @@
       <h1 class="wavy-headline">Unlock the Power of Your Dreams</h1>
       <p class="subtitle">DreamWeaver uses AI to help you control and enhance your dreams with personalized soundscapes and sleep insights. Imagine a world where your dreams are as vivid and memorable as your waking life.</p>
       <button class="cta-btn" aria-label="Join the Waitlist for DreamWeaver">Join the Waitlist</button>
-    </header>
-    <section class="features" aria-label="How DreamWeaver Works">
-      <h2>How it Works</h2>
-      <ul>
-        <li><strong>Track:</strong> Monitors your sleep cycles and dream patterns</li>
-        <li><strong>Guide:</strong> AI-generated soundscapes nudge you into lucid dreams</li>
-        <li><strong>Recall:</strong> Wake up to a personalized dream journal</li>
-      </ul>
-    </section>
-    <section class="testimonials" aria-label="Testimonials">
-      <h2>What Dreamers Say</h2>
-      <blockquote>“I never thought I could control my dreams. Now, every night is an adventure!”<br><span>— Mahesh N. -Founder(CEO)</span></blockquote>
-      <blockquote>“DreamWeaver made my sleep so much more restful and fun.”<br><span>— Jahnavi Ch.</span></blockquote>
-    </section>
-    <footer>
-      <p>&copy; 2024 DreamWeaver. All rights reserved.</p>
-    </footer>
-  </main>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features-section">
+    <div class="container">
+      <h2 class="section-title">How it Works</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🌙</div>
+          <h3>Track</h3>
+          <p>Monitors your sleep cycles and dream patterns with advanced AI algorithms</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🎵</div>
+          <h3>Guide</h3>
+          <p>AI-generated soundscapes nudge you into lucid dreams naturally</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📖</div>
+          <h3>Recall</h3>
+          <p>Wake up to a personalized dream journal with insights and patterns</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section id="testimonials" class="testimonials-section">
+    <div class="container">
+      <h2 class="section-title">What Dreamers Say</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial-card">
+          <blockquote>"I never thought I could control my dreams. Now, every night is an adventure!"</blockquote>
+          <div class="testimonial-author">— Mahesh N. -Founder(CEO)</div>
+        </div>
+        <div class="testimonial-card">
+          <blockquote>"Finally, I can remember my dreams and learn from them!"</blockquote>
+          <div class="testimonial-author">— Jayram K. -Co-Founder(CTO)</div>
+        </div>
+        <div class="testimonial-card">
+          <blockquote>"DreamWeaver made my sleep so much more restful and fun."</blockquote>
+          <div class="testimonial-author">— Jahnavi Ch.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <h2 class="section-title">Ready to Start Dreaming?</h2>
+      <p class="contact-subtitle">Be among the first to experience the future of sleep</p>
+      <div class="contact-form">
+        <input type="email" placeholder="Enter your email" class="email-input">
+        <button class="cta-btn">Join the Waitlist</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 DreamWeaver. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
 </body>
 </html>
